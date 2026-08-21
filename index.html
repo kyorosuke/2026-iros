@@ -1,13 +1,257 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>研究紹介</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research Project Title</title>
+
+  <!-- Elegant English fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --background: #f5f3ee;
+      --surface: rgba(255, 255, 255, 0.72);
+      --text: #202522;
+      --muted: #68716b;
+      --accent: #49675a;
+      --line: rgba(32, 37, 34, 0.12);
+      --shadow: 0 24px 70px rgba(31, 40, 35, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #e1e9df 0, transparent 35%),
+        radial-gradient(circle at bottom right, #e8dfd5 0, transparent 35%),
+        var(--background);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 72px;
+    }
+
+    .label {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: "Playfair Display", serif;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0 auto 22px;
+      font-size: clamp(2.7rem, 8vw, 5.8rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .authors {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .authors span {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    section {
+      margin: 70px 0;
+    }
+
+    .description {
+      padding: 44px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .video-block {
+      position: relative;
+      overflow: hidden;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #111;
+      box-shadow: var(--shadow);
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+      background: #000;
+    }
+
+    .video-caption {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+    }
+
+    footer {
+      margin-top: 100px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(100% - 24px, 920px);
+        padding: 64px 0;
+      }
+
+      header {
+        margin-bottom: 48px;
+      }
+
+      section {
+        margin: 42px 0;
+      }
+
+      .description {
+        padding: 30px 22px;
+        border-radius: 18px;
+      }
+
+      .video-block {
+        padding: 6px;
+        border-radius: 18px;
+      }
+
+      video {
+        border-radius: 13px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>研究紹介</h1>
-  <video controls width="800">
-    <source src="video.mp4" type="video/mp4">
-  </video>
+  <main>
+    <!-- Title and authors -->
+    <header>
+      <p class="label">Research Project · 2026</p>
+
+      <h1>
+        Electrical Activity in Living Fungi
+      </h1>
+
+      <p class="authors">
+        <span>Your Name</span> · Your Laboratory · Your University
+      </p>
+    </header>
+
+    <!-- Introduction -->
+    <section class="description">
+      <p class="label">Introduction</p>
+
+      <h2>About This Research</h2>
+
+      <p>
+        This project investigates electrical potential fluctuations in living
+        fungi. By recording long-term changes from multiple electrode
+        positions, we explore how growth, environmental stimuli, and electrode
+        interactions contribute to the observed signals.
+      </p>
+    </section>
+
+    <!-- Video 1 -->
+    <section>
+      <div class="video-block">
+        <video controls preload="metadata">
+          <source src="video-1.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </div>
+
+      <p class="video-caption">
+        Video 01 · Experimental setup and measurement system
+      </p>
+    </section>
+
+    <!-- Second description -->
+    <section class="description">
+      <p class="label">Experiment</p>
+
+      <h2>Observing the Response</h2>
+
+      <p>
+        The following video presents a representative observation from the
+        experiment. The recorded electrical data are compared with visible
+        growth, environmental conditions, and possible movement artifacts.
+      </p>
+    </section>
+
+    <!-- Video 2 -->
+    <section>
+      <div class="video-block">
+        <video controls preload="metadata">
+          <source src="video-2.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </div>
+
+      <p class="video-caption">
+        Video 02 · Recorded response and visual observation
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Your Name · Research documentation
+    </footer>
+  </main>
 </body>
 </html>

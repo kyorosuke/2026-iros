@@ -52,12 +52,12 @@
     main {
       width: min(100% - 32px, 820px);
       margin: 0 auto;
-      padding: 48px 0;
+      padding: 28px 0 48px;
       text-align: center;
     }
 
     header {
-      padding: 24px 0 32px;
+      padding: 8px 0 16px;
     }
 
     .eyebrow {
@@ -83,37 +83,51 @@
     }
 
     h2 {
-      margin-bottom: 18px;
+      margin-bottom: 12px;
       font-size: clamp(1.4rem, 5.2vw, 2.1rem);
     }
 
     .author {
-      margin: 24px 0 0;
+      margin: 16px 0 0;
       color: var(--muted);
       font-size: 0.95rem;
     }
 
     section {
-      margin: 24px 0;
+      margin: 42px 0;
+    }
+
+    header + .media-pair {
+      margin-top: 18px;
     }
 
     .media-pair {
       overflow: hidden;
-      padding: 8px;
+      padding: 4px;
       border: 1px solid var(--line);
       border-radius: 24px;
       background: #1c1c1c;
     }
 
     .description {
-      padding: 30px 18px;
+      padding: 16px 14px 18px;
+    }
+
+    .description .eyebrow {
+      margin-bottom: 10px;
+      font-size: 0.64rem;
+    }
+
+    .description h2 {
+      font-size: clamp(1.2rem, 4.5vw, 1.7rem);
     }
 
     .description p:last-child {
       max-width: 600px;
       margin: 0 auto;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 0.88rem;
+      line-height: 1.25;
     }
 
     .video-frame {
@@ -132,10 +146,10 @@
 
     .caption {
       margin: 0;
-      padding: 16px 20px;
+      padding: 12px 14px;
       color: var(--muted);
       background: #141414;
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       letter-spacing: 0.05em;
       text-align: left;
     }
@@ -150,15 +164,15 @@
 
     @media (min-width: 700px) {
       main {
-        padding-top: 96px;
+        padding-top: 52px;
       }
 
       section {
-        margin: 56px 0;
+        margin: 64px 0;
       }
 
       .description {
-        padding: 44px 40px;
+        padding: 22px 26px 24px;
       }
     }
 
@@ -182,6 +196,7 @@
       <div class="description">
         <p class="eyebrow">Hello</p>
         <h2>Hello Hello</h2>
+
         <p>
           Hello hello hello. Hello hello hello hello hello. Hello hello,
           hello hello hello hello hello.
@@ -202,6 +217,7 @@
       <div class="description">
         <p class="eyebrow">Hello</p>
         <h2>Hello Hello</h2>
+
         <p>
           Hello hello hello. Hello hello hello hello hello. Hello hello,
           hello hello hello hello hello.

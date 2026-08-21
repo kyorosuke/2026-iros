@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Hello hello hello.">
 
-  <title>Research Project Title</title>
+  <title>Hello Hello Hello</title>
 
-  <!-- Elegant English fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
     rel="stylesheet"
   >
 
   <style>
     :root {
-      --background: #f5f3ee;
-      --surface: rgba(255, 255, 255, 0.72);
-      --text: #202522;
-      --muted: #68716b;
-      --accent: #49675a;
-      --line: rgba(32, 37, 34, 0.12);
-      --shadow: 0 24px 70px rgba(31, 40, 35, 0.10);
+      color-scheme: dark;
+      --background: #050505;
+      --surface: #101010;
+      --surface-light: #171717;
+      --text: #f5f5f2;
+      --muted: #a1a1a1;
+      --accent: rgb(76, 187, 157);
+      --line: rgba(255, 255, 255, 0.12);
     }
 
     * {
@@ -37,28 +39,31 @@
       margin: 0;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, #e1e9df 0, transparent 35%),
-        radial-gradient(circle at bottom right, #e8dfd5 0, transparent 35%),
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(76, 187, 157, 0.14),
+          transparent 34rem
+        ),
         var(--background);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.8;
+      font-family: "DM Sans", system-ui, sans-serif;
+      line-height: 1.7;
     }
 
     main {
-      width: min(920px, calc(100% - 40px));
+      width: min(100% - 32px, 820px);
       margin: 0 auto;
-      padding: 100px 0;
+      padding: 48px 0;
       text-align: center;
     }
 
     header {
-      margin-bottom: 72px;
+      padding: 24px 0 32px;
     }
 
-    .label {
+    .eyebrow {
       margin: 0 0 18px;
       color: var(--accent);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -66,114 +71,100 @@
 
     h1,
     h2 {
-      font-family: "Playfair Display", serif;
+      margin: 0;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
     }
 
     h1 {
-      max-width: 800px;
-      margin: 0 auto 22px;
-      font-size: clamp(2.7rem, 8vw, 5.8rem);
-      font-weight: 500;
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-    }
-
-    .authors {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .authors span {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    section {
-      margin: 70px 0;
-    }
-
-    .description {
-      padding: 44px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+      font-size: clamp(1.8rem, 7vw, 3.2rem);
+      text-wrap: balance;
     }
 
     h2 {
-      margin: 0 0 20px;
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 500;
-      line-height: 1.2;
+      margin-bottom: 18px;
+      font-size: clamp(1.4rem, 5.2vw, 2.1rem);
     }
 
-    p {
-      max-width: 680px;
+    .author {
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin: 24px 0;
+    }
+
+    .media-pair {
+      overflow: hidden;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #1c1c1c;
+    }
+
+    .description {
+      padding: 30px 18px;
+    }
+
+    .description p:last-child {
+      max-width: 600px;
       margin: 0 auto;
       color: var(--muted);
       font-size: 1rem;
     }
 
-    .video-block {
-      position: relative;
+    .video-frame {
       overflow: hidden;
-      padding: 10px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: #111;
-      box-shadow: var(--shadow);
+      border-radius: 17px;
+      background: #000;
     }
 
     video {
       display: block;
       width: 100%;
-      border-radius: 16px;
+      aspect-ratio: 16 / 9;
       background: #000;
+      object-fit: cover;
     }
 
-    .video-caption {
-      margin-top: 18px;
+    .caption {
+      margin: 0;
+      padding: 16px 20px;
       color: var(--muted);
-      font-size: 0.88rem;
-      letter-spacing: 0.03em;
+      background: #141414;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-align: left;
     }
 
     footer {
-      margin-top: 100px;
-      padding-top: 28px;
+      margin-top: 64px;
+      padding-top: 24px;
       border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.85rem;
+      color: #686868;
+      font-size: 0.78rem;
     }
 
-    @media (max-width: 600px) {
+    @media (min-width: 700px) {
       main {
-        width: min(100% - 24px, 920px);
-        padding: 64px 0;
-      }
-
-      header {
-        margin-bottom: 48px;
+        padding-top: 96px;
       }
 
       section {
-        margin: 42px 0;
+        margin: 56px 0;
       }
 
       .description {
-        padding: 30px 22px;
-        border-radius: 18px;
+        padding: 44px 40px;
       }
+    }
 
-      .video-block {
-        padding: 6px;
-        border-radius: 18px;
-      }
-
-      video {
-        border-radius: 13px;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
@@ -181,71 +172,54 @@
 
 <body>
   <main>
-    <!-- Title and authors -->
     <header>
-      <p class="label">Research Project · 2026</p>
-
-      <h1>
-        Happy Research Hello Hello
-      </h1>
-
-      <p class="authors">
-        <span>Your Name</span> · Your Laboratory · Your University
-      </p>
+      <p class="eyebrow">Hello · 2026</p>
+      <h1>Hello Hello Hello</h1>
+      <p class="author">Hello Hello · Hello Laboratory</p>
     </header>
 
-    <!-- Introduction -->
-    <section class="description">
-      <p class="label">Introduction</p>
+    <section class="media-pair">
+      <div class="description">
+        <p class="eyebrow">Hello</p>
+        <h2>Hello Hello</h2>
+        <p>
+          Hello hello hello. Hello hello hello hello hello. Hello hello,
+          hello hello hello hello hello.
+        </p>
+      </div>
 
-      <h2>About This Research</h2>
-
-      <p>
-        hello hello hello
-      </p>
-    </section>
-
-    <!-- Video 1 -->
-    <section>
-      <div class="video-block">
-        <video controls preload="metadata">
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
           <source src="video-1.mp4" type="video/mp4">
-          Your browser does not support the video element.
+          Hello hello hello.
         </video>
+
+        <p class="caption">01 — Hello hello hello</p>
+      </div>
+    </section>
+
+    <section class="media-pair">
+      <div class="description">
+        <p class="eyebrow">Hello</p>
+        <h2>Hello Hello</h2>
+        <p>
+          Hello hello hello. Hello hello hello hello hello. Hello hello,
+          hello hello hello hello hello.
+        </p>
       </div>
 
-      <p class="video-caption">
-        Video 01 · Experimental setup and measurement system
-      </p>
-    </section>
-
-    <!-- Second description -->
-    <section class="description">
-      <p class="label">Experiment</p>
-
-      <h2>Observing the Response</h2>
-
-      <p>
-        Hello Hello Hello
-      </p>
-    </section>
-
-    <!-- Video 2 -->
-    <section>
-      <div class="video-block">
-        <video controls preload="metadata">
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
           <source src="video-2.mp4" type="video/mp4">
-          Your browser does not support the video element.
+          Hello hello hello.
         </video>
-      </div>
 
-      <p class="video-caption">
-        Video 02 · Recorded response and visual observation
-      </p>
+        <p class="caption">02 — Hello hello hello</p>
+      </div>
     </section>
 
     <footer>
-      © 2026 Your Name · Research documentation
+      © 2026 Hello Hello
     </footer>
   </main>
 </body>

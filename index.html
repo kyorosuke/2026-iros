@@ -78,7 +78,13 @@
     }
 
     h1 {
-      font-size: clamp(1.8rem, 7vw, 3.2rem);
+      max-width: 720px;
+      margin-inline: auto;
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: clamp(1.3rem, 4.5vw, 2.1rem);
+      font-weight: 500;
+      line-height: 1.16;
+      letter-spacing: -0.025em;
       text-wrap: balance;
     }
 
@@ -144,6 +150,22 @@
       object-fit: cover;
     }
 
+    .image-frame {
+      overflow: hidden;
+      margin: 0;
+      border-radius: 17px;
+      background: #000;
+    }
+
+    .image-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      object-fit: cover;
+    }
+
     .caption {
       margin: 0;
       padding: 12px 14px;
@@ -188,11 +210,19 @@
   <main>
     <header>
       <p class="eyebrow">2026・IROS</p>
-      <h1>A Soft Inchworm Robot Capable of Exploratory Locomotion via
-Deformable Body Dynamics</h1>
-      <p class="author">Kyohei Watanabe, Kazashi Nakano, Max Austin, Yasuo Kuniyoshi, and Kohei Nakajima</p>
+
+      <h1>
+        A Soft Inchworm Robot Capable of Exploratory Locomotion via
+        Deformable Body Dynamics
+      </h1>
+
+      <p class="author">
+        Kyohei Watanabe, Kazashi Nakano, Max Austin, Yasuo Kuniyoshi,
+        and Kohei Nakajima
+      </p>
     </header>
 
+    <!-- Video section 1 -->
     <section class="media-pair">
       <div class="description">
         <p class="eyebrow">Hello</p>
@@ -214,6 +244,7 @@ Deformable Body Dynamics</h1>
       </div>
     </section>
 
+    <!-- Video section 2 -->
     <section class="media-pair">
       <div class="description">
         <p class="eyebrow">Hello</p>
@@ -233,6 +264,31 @@ Deformable Body Dynamics</h1>
 
         <p class="caption">02 — Hello hello hello</p>
       </div>
+    </section>
+
+    <!-- Image section -->
+    <section class="media-pair">
+      <div class="description">
+        <p class="eyebrow">Hello</p>
+        <h2>Hello Image</h2>
+
+        <p>
+          Hello hello hello. Hello hello hello hello hello. Hello hello,
+          hello hello hello hello hello.
+        </p>
+      </div>
+
+      <figure class="image-frame">
+        <img
+          src="image-1.jpg"
+          alt="Hello hello hello"
+          loading="lazy"
+        >
+
+        <figcaption class="caption">
+          03 — Hello image description
+        </figcaption>
+      </figure>
     </section>
 
     <footer>
